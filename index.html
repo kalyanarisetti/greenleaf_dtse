@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenLeaf Organics - Fresh, Organic Goodness</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #2D3748;
+        }
+        .bg-hero {
+            background-image: url('https://i.postimg.cc/NKtkTy5Z/fresh-vegetables-food.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Snowflake animation */
+        @keyframes snowfall {
+            0% { transform: translateY(-100vh); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateY(100vh); opacity: 0; }
+        }
+
+        .snowflake {
+            position: absolute;
+            background-color: #fff;
+            border-radius: 50%;
+            opacity: 0;
+            animation: snowfall linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Hero Section -->
+    <header class="bg-hero min-h-screen flex items-center justify-center text-center">
+        <!-- Snowflake Container -->
+        <div id="snow-container" class="absolute inset-0 z-0"></div>
+
+        <div class="relative bg-white bg-opacity-80 rounded-xl p-8 md:p-12 max-w-4xl mx-4 z-10">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-green-700 leading-tight mb-4">Fresh, Organic Goodness Delivered to Your Door</h1>
+            <p class="text-xl md:text-2xl text-gray-700 mb-8">Your trusted source for locally-sourced, healthy produce.</p>
+            <a href="#products" class="bg-green-600 text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-green-700 transition duration-300 shadow-lg">Shop Now</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-16">
+
+        <!-- About Us Section -->
+        <section id="about" class="mb-24">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-green-800">Our Story</h2>
+                <p class="text-gray-600 text-lg md:text-xl leading-relaxed">
+                    At GreenLeaf Organics, we believe that food should be a reflection of care—care for the land, our community, and your well-being. We are a family-run business committed to providing the finest organic produce and pantry staples, sourced directly from local, sustainable farms in and around Hyderabad. Our mission is to make healthy, chemical-free food accessible to every health-conscious family.
+                </p>
+            </div>
+        </section>
+
+        <!-- Our Products Section -->
+        <section id="products" class="mb-24">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-green-800">Our Products</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="https://pramitgupta.github.io/GreenLeaf_New/images/B1.png" alt="Fresh Fruits & Vegetables" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Fresh Fruits & Vegetables</h3>
+                        <p class="text-gray-600">Harvested at peak freshness, our produce is packed with nutrients and flavor.</p>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="https://pramitgupta.github.io/GreenLeaf_New/images/B2.png" alt="Pantry Staples" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Pantry Staples</h3>
+                        <p class="text-gray-600">From ancient grains to cold-pressed oils, elevate your kitchen with our organic essentials.</p>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="https://pramitgupta.github.io/GreenLeaf_New/images/B3.png" alt="Organic Dairy & Eggs" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Organic Dairy & Eggs</h3>
+                        <p class="text-gray-600">Responsibly sourced from local farms, ensuring the highest quality and taste.</p>
+                    </div>
+                </div>
+                <!-- Product Card 4 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="https://pramitgupta.github.io/GreenLeaf_New/images/B4.png" alt="Specialty Items" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Specialty Items</h3>
+                        <p class="text-gray-600">Discover artisanal bread, local honey, and other unique products from our partners.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Recipe Generator Section -->
+        <section id="recipe-generator" class="mb-24">
+            <div class="max-w-4xl mx-auto text-center bg-gray-100 rounded-xl p-8 shadow-md">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-green-800">Recipe Inspirations ✨</h2>
+                <p class="text-gray-600 text-lg mb-8">Tell us what you have, and we'll help you create something delicious!</p>
+                <div class="flex flex-col md:flex-row gap-4 mb-8">
+                    <input type="text" id="ingredients-input" class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Enter ingredients (e.g., tomatoes, onions, spinach)">
+                    <button id="generate-recipe-btn" class="bg-green-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-700 transition duration-300">Generate Recipe</button>
+                </div>
+                <div id="recipe-output" class="text-left bg-white rounded-lg p-6 border border-gray-200" style="min-height: 100px;">
+                    <p class="text-gray-400 italic">Your recipe will appear here...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Us Section -->
+        <section id="why-us" class="mb-24 bg-green-50 rounded-xl py-16 px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-green-800">Why Choose GreenLeaf?</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="text-center p-6 bg-white rounded-lg shadow-md">
+                    <div class="text-green-600 text-4xl mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2l4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg text-gray-800 mb-2">100% Certified Organic</h3>
+                    <p class="text-gray-600">We guarantee our products are grown without synthetic pesticides or fertilizers.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="text-center p-6 bg-white rounded-lg shadow-md">
+                    <div class="text-green-600 text-4xl mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg text-gray-800 mb-2">Fast Local Delivery</h3>
+                    <p class="text-gray-600">Enjoy same-day delivery on all orders placed before 1 PM.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="text-center p-6 bg-white rounded-lg shadow-md">
+                    <div class="text-green-600 text-4xl mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg text-gray-800 mb-2">Locally Sourced</h3>
+                    <p class="text-gray-600">We partner with small, local farms to bring you the freshest seasonal products.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="text-center p-6 bg-white rounded-lg shadow-md">
+                    <div class="text-green-600 text-4xl mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg text-gray-800 mb-2">Eco-Friendly Packaging</h3>
+                    <p class="text-gray-600">We use minimal and compostable packaging to protect our planet.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="mb-24">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-green-800">What Our Customers Say</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-gray-100 rounded-xl p-8 shadow-md">
+                    <p class="text-gray-700 italic mb-4">"The produce from GreenLeaf Organics is always incredibly fresh and the delivery is so fast. A total game-changer for my weekly shopping!"</p>
+                    <p class="font-semibold text-green-700">- Ananya Sharma, Jubilee Hills</p>
+                </div>
+                <div class="bg-gray-100 rounded-xl p-8 shadow-md">
+                    <p class="text-gray-700 italic mb-4">"I love knowing that my family is eating clean, chemical-free food. The quality and service from GreenLeaf Organics are unmatched!"</p>
+                    <p class="font-semibold text-green-700">- Raghav Reddy, Kondapur</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- YouTube Video Widget -->
+        <section id="youtube-video" class="mb-24">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-green-800">Check out this fun video!</h2>
+                <div class="relative w-full overflow-hidden rounded-xl shadow-lg" style="padding-top: 56.25%;">
+                    <iframe 
+                        class="absolute top-0 left-0 w-full h-full rounded-xl" 
+                        src="https://www.youtube.com/embed/Vagc5qqm1_o" 
+                        title="Embedded YouTube video" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                    ></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="mb-24">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-green-800">Get In Touch</h2>
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8 max-w-4xl mx-auto">
+                <div class="bg-gray-100 rounded-xl p-8 shadow-md w-full md:w-1/2">
+                    <h3 class="text-xl font-semibold mb-4 text-green-800">Contact Information</h3>
+                    <p class="mb-2"><span class="font-semibold">Phone:</span> +91 9485721360</p>
+                    <p class="mb-2"><span class="font-semibold">Email:</span> greenleaf.organics@dtse.com</p>
+                    <p class="mb-2"><span class="font-semibold">Address:</span> 123, ISB Road, GachiBowli, Hyderabad TG 500111</p>
+                    <p class="mb-2"><span class="font-semibold">Business Hours:</span> Mon-Sat, 9:00 AM - 7:00 PM</p>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-gray-500 hover:text-green-600 transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.013 4.85.068 1.487.062 2.093.298 2.59.494a4.102 4.102 0 011.458.917c.563.563.92 1.25 1.116 2.053.196.497.432 1.103.494 2.59.055 1.266.068 1.646.068 4.85 0 3.204-.013 3.584-.068 4.85-.062 1.487-.298 2.093-.494 2.59a4.102 4.102 0 01-.917 1.458c-.563.563-1.25.92-2.053 1.116-.497.196-1.103.432-2.59.494-1.266.055-1.646.068-4.85.068-3.204 0-3.584-.013-4.85-.068-1.487-.062-2.093-.298-2.59-.494a4.102 4.102 0 01-1.458-.917c-.563-.563-.92-1.25-1.116-2.053-.196-.497-.432-1.103-.494-2.59-.055-1.266-.068-1.646-.068-4.85 0-3.204.013-3.584.068-4.85.062-1.487.298-2.093.494-2.59a4.102 4.102 0 01.917-1.458c.563-.563 1.25-.92 2.053-1.116.497-.196 1.103-.432 2.59-.494 1.266-.055 1.646-.068 4.85-.068zm0-2.163c-3.259 0-3.667.014-4.947.072-1.66.068-2.73.34-3.59.67a6.22 6.22 0 00-2.22 1.393A6.22 6.22 0 00.67 6.44c-.33.86-.602 1.93-.67 3.59-.058 1.28-.072 1.688-.072 4.947s.014 3.667.072 4.947c.068 1.66.34 2.73.67 3.59a6.22 6.22 0 001.393 2.22c.86.33 1.93.602 3.59.67 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.66-.068 2.73-.34 3.59-.67a6.22 6.22 0 002.22-1.393c.86-.33 1.93-.602 3.59-.67 1.28-.058 1.688-.072 4.947-.072s3.667.014 4.947.072c1.66.068 2.73.34 3.59.67a6.22 6.22 0 002.22 1.393c.86.33 1.93.602 3.59.67 1.28.058 1.688.072 4.947.072zM12 18a6 6 0 100-12 6 6 0 000 12zm0-10a4 4 0 110 8 4 4 0 010-8zm5-4a1 1 0 100-2 1 1 0 000 2z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-green-600 transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .733.593 1.325 1.325 1.325h11.455v-9.294h-3.149v-3.693h3.149v-2.193c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.793.143v3.25l-1.928.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.667l-.478 3.693h-3.189v9.294h6.074c.732 0 1.325-.593 1.325-1.325v-21.351c0-.732-.593-1.325-1.325-1.325z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-gray-100 rounded-xl p-8 shadow-md w-full md:w-1/2">
+                    <h3 class="text-xl font-semibold mb-4 text-green-800">Send us a message</h3>
+                    <form>
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-semibold mb-2">Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Your Name">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="your.email@example.com">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Your message..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-green-600 text-white font-bold py-3 rounded-lg hover:bg-green-700 transition duration-300">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center text-sm md:flex md:justify-between md:items-center">
+            <p class="mb-4 md:mb-0">&copy; 2025 GreenLeaf Organics. All rights reserved.</p>
+            <div class="space-x-4">
+                <a href="#about" class="hover:text-green-300 transition duration-300">About Us</a>
+                <a href="#products" class="hover:text-green-300 transition duration-300">Products</a>
+                <a href="#contact" class="hover:text-green-300 transition duration-300">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('generate-recipe-btn').addEventListener('click', async () => {
+            const ingredients = document.getElementById('ingredients-input').value;
+            const outputDiv = document.getElementById('recipe-output');
+            const generateButton = document.getElementById('generate-recipe-btn');
+
+            if (!ingredients) {
+                outputDiv.innerHTML = '<p class="text-red-500">Please enter at least one ingredient.</p>';
+                return;
+            }
+
+            outputDiv.innerHTML = '<div class="flex items-center justify-center"><div class="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-green-500"></div><span class="ml-2 text-gray-600">Generating recipe...</span></div>';
+            generateButton.disabled = true;
+
+            const userPrompt = `Generate a healthy, simple, and family-friendly recipe for a health-conscious family in Hyderabad, India. The recipe must use the following ingredients: ${ingredients}. The response should be formatted using Markdown with a clear title, a list of ingredients, and numbered steps for instructions.`;
+            
+            const payload = {
+                contents: [{ parts: [{ text: userPrompt }] }],
+                systemInstruction: {
+                    parts: [{ text: "You are a professional recipe generator specializing in healthy, organic, and simple recipes. Always format your responses clearly using Markdown." }]
+                }
+            };
+
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`API call failed with status: ${response.status}`);
+                }
+
+                const result = await response.json();
+                const text = result?.candidates?.[0]?.content?.parts?.[0]?.text;
+
+                if (text) {
+                    outputDiv.innerHTML = marked.parse(text);
+                } else {
+                    outputDiv.innerHTML = '<p class="text-red-500">Failed to generate a recipe. Please try again with different ingredients.</p>';
+                }
+            } catch (error) {
+                console.error('Error generating recipe:', error);
+                outputDiv.innerHTML = '<p class="text-red-500">An error occurred. Please try again later.</p>';
+            } finally {
+                generateButton.disabled = false;
+            }
+        });
+
+        // JavaScript for the snowflake animation
+        window.onload = function() {
+            const snowContainer = document.getElementById('snow-container');
+            const numSnowflakes = 50;
+
+            for (let i = 0; i < numSnowflakes; i++) {
+                createSnowflake();
+            }
+
+            function createSnowflake() {
+                const snowflake = document.createElement('div');
+                snowflake.className = 'snowflake';
+                const size = Math.random() * 5 + 2 + 'px'; // Size between 2 and 7px
+                snowflake.style.width = size;
+                snowflake.style.height = size;
+                snowflake.style.left = Math.random() * 100 + 'vw';
+                snowflake.style.animationDuration = Math.random() * 10 + 5 + 's'; // Duration between 5 and 15s
+                snowflake.style.animationDelay = Math.random() * 5 + 's';
+                snowContainer.appendChild(snowflake);
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</body>
+</html>
